@@ -16,5 +16,5 @@ if __name__ == "__main__":
     logging.info("main - before running thread")
     x.start()
     logging.info("main - wait for the thread to finish")
-    # x.join() will not wait for the daemon thread to finish
+    x.join() # main thread will wait until it has been joined with x
     logging.info("main - all done")
